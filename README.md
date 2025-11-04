@@ -91,19 +91,18 @@ vim.cmd("colorscheme earthsong")
 ```
 
 ## Color Palette
-
 ### Earthsong (Main) - Default
-- **Base**: `#292520` - Warm charcoal background
-- **Surface**: `#322d27` - Slightly lighter surface
-- **Overlay**: `#3c3731` - UI overlay color
-- **Text**: `#e5c7a9` - Warm light text
-- **Terracotta**: `#ff645a` - Solid red for errors
-- **Amber**: `#f5ae2e` - Warm golden yellow
-- **Clay**: `#d0633d` - Warm orangy brown
-- **Oak**: `#509552` - Muted green
-- **Sage**: `#1398b9` - Cool cyan/blue
-- **Moss**: `#85c54c` - Deep green
-- **Leaf**: `#98e036` - Bright lime green
+- **Base**: ![#292520](https://placehold.co/15x15/292520/292520.png) `#292520` - Warm charcoal background
+- **Surface**: ![#322d27](https://placehold.co/15x15/322d27/322d27.png) `#322d27` - Slightly lighter surface
+- **Overlay**: ![#3c3731](https://placehold.co/15x15/3c3731/3c3731.png) `#3c3731` - UI overlay color
+- **Text**: ![#e5c7a9](https://placehold.co/15x15/e5c7a9/e5c7a9.png) `#e5c7a9` - Warm light text
+- **Terracotta**: ![#ff645a](https://placehold.co/15x15/ff645a/ff645a.png) `#ff645a` - Solid red for errors
+- **Amber**: ![#f5ae2e](https://placehold.co/15x15/f5ae2e/f5ae2e.png) `#f5ae2e` - Warm golden yellow
+- **Clay**: ![#d0633d](https://placehold.co/15x15/d0633d/d0633d.png) `#d0633d` - Warm orangy brown
+- **Oak**: ![#509552](https://placehold.co/15x15/509552/509552.png) `#509552` - Muted green
+- **Sage**: ![#1398b9](https://placehold.co/15x15/1398b9/1398b9.png) `#1398b9` - Cool cyan/blue
+- **Moss**: ![#85c54c](https://placehold.co/15x15/85c54c/85c54c.png) `#85c54c` - Deep green
+- **Leaf**: ![#98e036](https://placehold.co/15x15/98e036/98e036.png) `#98e036` - Bright lime green
 
 ### Earthsong Mute
 A more understated variant with softer, less saturated tones for reduced eye strain during extended use:
