@@ -17,7 +17,7 @@ Install `earthsong` using your favorite package manager:
 ```lua
 -- lua/plugins/earthsong.lua
 return {
-    "guillermodotn/neovim-earthsong",
+    "guillermodotn/nvim-earthsong",
     name = "earthsong",
     config = function()
         vim.cmd("colorscheme earthsong")
@@ -28,7 +28,7 @@ return {
 ### [pam.nvim](https://github.com/mvllow/pam.nvim)
 
 ```lua
-{ source = "guillermodotn/neovim-earthsong", as = "earthsong" }
+{ source = "guillermodotn/nvim-earthsong", as = "earthsong" }
 ```
 
 ## Usage
