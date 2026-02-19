@@ -1,2 +1,2 @@
 package.loaded["earthsong.palette"] = nil
-require("earthsong").colorscheme()
+require("earthsong").colorscheme("main")

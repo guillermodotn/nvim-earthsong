@@ -610,15 +610,23 @@ local function set_highlights()
 		vim.g.terminal_color_7 = palette.text -- white
 		vim.g.terminal_color_15 = palette.text -- bright white
 
-		vim.cmd([[
-		augroup earthsong
-			autocmd!
-			autocmd TermOpen * if &buftype=='terminal'
-				\|setlocal winhighlight=StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC
-				\|else|setlocal winhighlight=|endif
-			autocmd ColorSchemePre * autocmd! earthsong
-		augroup END
-		]])
+		local group = vim.api.nvim_create_augroup("earthsong", { clear = true })
+		vim.api.nvim_create_autocmd("TermOpen", {
+			group = group,
+			callback = function()
+				if vim.bo.buftype == "terminal" then
+					vim.wo.winhighlight = "StatusLine:StatusLineTerm,StatusLineNC:StatusLineTermNC"
+				else
+					vim.wo.winhighlight = ""
+				end
+			end,
+		})
+		vim.api.nvim_create_autocmd("ColorSchemePre", {
+			group = group,
+			callback = function()
+				vim.api.nvim_del_augroup_by_name("earthsong")
+			end,
+		})
 	end
 end
 

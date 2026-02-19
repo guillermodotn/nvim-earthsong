@@ -8,7 +8,7 @@ local function color_to_rgb(color)
 
 	local new_color = vim.api.nvim_get_color_by_name(color)
 	if new_color == -1 then
-		new_color = vim.opt.background:get() == "dark" and 000 or 255255255
+		new_color = vim.opt.background:get() == "dark" and 0x000000 or 0xFFFFFF
 	end
 
 	return { byte(new_color, 16), byte(new_color, 8), byte(new_color, 0) }
@@ -23,13 +23,13 @@ function utilities.parse_color(color)
 	end
 
 	if color == nil then
-		print("Invalid color: " .. color)
+		print("Invalid color: " .. tostring(color))
 		return nil
 	end
 
 	color = color:lower()
 
-	if not color:find("#") and color ~= "NONE" then
+	if not color:find("#") and color ~= "none" then
 		color = require("earthsong.palette")[color] or vim.api.nvim_get_color_by_name(color)
 	end
 
@@ -43,7 +43,7 @@ local blend_cache = {}
 ---@param bg string Background color
 ---@param alpha number Between 0 (background) and 1 (foreground)
 function utilities.blend(fg, bg, alpha)
-	local cache_key = fg .. bg .. alpha
+	local cache_key = fg .. ":" .. bg .. ":" .. alpha
 	if blend_cache[cache_key] then
 		return blend_cache[cache_key]
 	end

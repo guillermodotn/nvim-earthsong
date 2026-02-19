@@ -1,5 +1,5 @@
 # Earthsong for Neovim
-A warm, earthy color theme for Neovim with vibrant accents and blanced tones.
+A warm, earthy color theme for Neovim with vibrant accents and balanced tones.
 
 ## Overview
 

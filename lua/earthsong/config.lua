@@ -1,5 +1,5 @@
 ---@alias Variant "main" | "mute"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, terracotta: string, amber: string, clay: string, oak: string, sage: string, moss: string }
+---@alias Palette { _nc: string, base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, terracotta: string, amber: string, clay: string, oak: string, sage: string, moss: string, leaf: string, highlight_low: string, highlight_med: string, highlight_high: string, none: string }
 ---@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "terracotta" | "amber" | "clay" | "oak" | "sage" | "moss" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
@@ -127,7 +127,7 @@ local function migrate(options)
 		options.groups.h4 = options.groups.headings
 		options.groups.h5 = options.groups.headings
 		options.groups.h6 = options.groups.headings
-	elseif options.groups.headings == "table" then
+	elseif type(options.groups.headings) == "table" then
 		options.groups.h1 = options.groups.headings.h1 or options.groups.h1
 		options.groups.h2 = options.groups.headings.h2 or options.groups.h2
 		options.groups.h3 = options.groups.headings.h3 or options.groups.h3
